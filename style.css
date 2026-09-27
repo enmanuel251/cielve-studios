@@ -1,4 +1,4 @@
-* {
+#* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -248,4 +248,82 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
+}
+
+.redes-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.redes-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.redes-container h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.redes-container p {
+  color: #888;
+  margin-bottom: 35px;
+}
+
+.redes-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.red-social {
+  width: 280px;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: white;
+  background: #151515;
+  border: 1px solid #292929;
+  transition: 0.3s;
+}
+
+.red-social:hover {
+  transform: translateY(-5px);
+  border-color: #555;
+}
+
+.red-social .icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.red-social div {
+  text-align: left;
+}
+
+.red-social strong {
+  display: block;
+  font-size: 18px;
+}
+
+.red-social small {
+  color: #999;
+}
+
+.instagram .icon {
+  background: linear-gradient(45deg, #feda75, #d62976, #4f5bd5);
+}
+
+.facebook .icon {
+  background: #1877f2;
 }
