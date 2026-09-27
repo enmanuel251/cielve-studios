@@ -327,3 +327,32 @@ footer {
 .facebook .icon {
   background: #1877f2;
 }
+
+.redes-section {
+  background: #000;
+  width: 100%;
+  min-height: 500px;
+  padding: 100px 20px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+}
+
+.redes-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.redes-container h2 {
+  font-size: 60px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.redes-container p {
+  font-size: 20px;
+  color: #aaa;
+  margin-bottom: 50px;
+}
