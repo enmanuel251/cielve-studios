@@ -356,3 +356,16 @@ footer {
   color: #aaa;
   margin-bottom: 50px;
 }
+.hero-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.hero-logo img {
+  width: min(900px, 90%);
+  height: auto;
+  display: block;
+}
