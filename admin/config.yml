@@ -1,0 +1,34 @@
+backend:
+  name: github
+  repo: TU_USUARIO/TU_REPOSITORIO
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "paginas"
+    label: "Páginas"
+    files:
+
+      - file: "index.html"
+        label: "Página principal"
+        name: "inicio"
+        fields:
+
+          - label: "Título"
+            name: "title"
+            widget: "string"
+
+          - label: "Descripción"
+            name: "description"
+            widget: "text"
+
+      - file: "redes.html"
+        label: "Redes sociales"
+        name: "redes"
+        fields:
+
+          - label: "Contenido"
+            name: "content"
+            widget: "markdown"
