@@ -1,83 +1,345 @@
-<div class="hero-logo">
-  <img src="images/cielve-logo.png" alt="Cielve Studios">
-</div>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description" content="Cielve Studios - Estudio independiente de videojuegos.">
+    <meta name="theme-color" content="#080808">
+
     <title>Cielve Studios</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <a href="index.html" class="logo">CIELVE<span>STUDIOS</span></a>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="juegos.html">Juegos</a>
-        <a href="lore.html">Lore</a>
-        <a href="redes.html">Redes</a>
-    </nav>
-</header>
+            <a href="#inicio" class="brand">
+                <img src="images/cielve-logo.png" alt="Cielve Studios">
+                <span>Cielve Studios</span>
+            </a>
 
-<main>
+            <nav class="nav-menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#juegos">Juegos</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#redes">Redes</a>
+            </nav>
 
-    <section class="hero">
-        <p class="tag">INDEPENDENT GAME STUDIO</p>
+            <a href="#redes" class="nav-button">
+                Síguenos
+            </a>
 
-        <h1>CIELVE<br><span>STUDIOS</span></h1>
+        </div>
+    </header>
 
-        <p class="hero-text">
-            Creamos mundos, historias y videojuegos.
-        </p>
 
-        <a href="juegos.html" class="button">
-            VER JUEGOS
-        </a>
-    </section>
+    <!-- HERO -->
+    <main>
 
-    <section class="featured">
+        <section id="inicio" class="hero">
 
-        <h2>PROYECTOS</h2>
+            <div class="hero-background"></div>
 
-        <div class="game-card">
+            <div class="hero-content">
 
-            <div class="game-image">
-                🎮
-            </div>
+                <div class="hero-logo">
+                    <img src="images/cielve-logo.png" alt="Logo de Cielve Studios">
+                </div>
 
-            <div class="game-info">
-                <p class="tag">PRÓXIMAMENTE</p>
-
-                <h3>Nuestro próximo juego</h3>
-
-                <p>
-                    Aquí aparecerá la información del próximo
-                    videojuego de Cielve Studios.
+                <p class="hero-tag">
+                    INDEPENDENT GAME STUDIO
                 </p>
 
-                <a href="juegos.html" class="button small">
-                    MÁS INFORMACIÓN
-                </a>
+                <h1>
+                    Creamos mundos.<br>
+                    <span>Contamos historias.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Cielve Studios es un estudio independiente enfocado
+                    en crear videojuegos, experiencias y mundos únicos.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#juegos" class="button primary">
+                        Ver proyectos
+                    </a>
+
+                    <a href="#redes" class="button secondary">
+                        Nuestras redes
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="scroll-indicator">
+                <span></span>
+                Desliza
+            </div>
+
+        </section>
+
+
+        <!-- JUEGOS -->
+        <section id="juegos" class="section">
+
+            <div class="section-heading">
+                <p>OUR GAMES</p>
+                <h2>Nuestros juegos</h2>
+                <span></span>
+            </div>
+
+            <div class="games-grid">
+
+                <article class="game-card featured">
+
+                    <div class="game-image game-one">
+                        <div class="game-overlay">
+                            <span>EN DESARROLLO</span>
+                        </div>
+                    </div>
+
+                    <div class="game-info">
+                        <p class="category">VIDEOJUEGO</p>
+                        <h3>Ciel</h3>
+
+                        <p>
+                            Una nueva aventura desarrollada por
+                            Cielve Studios.
+                        </p>
+
+                        <a href="#proyectos" class="card-link">
+                            Ver proyecto →
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <article class="game-card">
+
+                    <div class="game-image game-two">
+                        <div class="game-placeholder">
+                            PROYECTO
+                        </div>
+                    </div>
+
+                    <div class="game-info">
+                        <p class="category">PRÓXIMAMENTE</p>
+                        <h3>Nuevo mundo</h3>
+
+                        <p>
+                            Más proyectos y experiencias están
+                            en camino.
+                        </p>
+
+                        <a href="#proyectos" class="card-link">
+                            Próximamente →
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <article class="game-card">
+
+                    <div class="game-image game-three">
+                        <div class="game-placeholder">
+                            2026
+                        </div>
+                    </div>
+
+                    <div class="game-info">
+                        <p class="category">EN DESARROLLO</p>
+                        <h3>Más por descubrir</h3>
+
+                        <p>
+                            El universo de Cielve Studios apenas
+                            está comenzando.
+                        </p>
+
+                        <a href="#proyectos" class="card-link">
+                            Descubrir →
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+        <section id="proyectos" class="projects-section">
+
+            <div class="project-content">
+
+                <div class="project-text">
+
+                    <p class="section-label">
+                        CIELVE STUDIOS
+                    </p>
+
+                    <h2>
+                        Un estudio.<br>
+                        <span>Ideas infinitas.</span>
+                    </h2>
+
+                    <p>
+                        Estamos construyendo nuestra identidad,
+                        desarrollando videojuegos y aprendiendo
+                        nuevas formas de convertir ideas en experiencias.
+                    </p>
+
+                    <div class="project-stats">
+
+                        <div>
+                            <strong>01</strong>
+                            <span>Estudio</span>
+                        </div>
+
+                        <div>
+                            <strong>∞</strong>
+                            <span>Ideas</span>
+                        </div>
+
+                        <div>
+                            <strong>2026</strong>
+                            <span>Fundación</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="project-visual">
+                    <div class="visual-ring">
+                        <img
+                            src="images/cielve-logo.png"
+                            alt="Cielve Studios"
+                        >
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REDES -->
+        <section id="redes" class="social-section">
+
+            <div class="social-container">
+
+                <p class="section-label">
+                    STAY CONNECTED
+                </p>
+
+                <h2>
+                    Síguenos
+                </h2>
+
+                <p class="social-description">
+                    Sigue a Cielve Studios para conocer nuestros
+                    proyectos, novedades y próximos lanzamientos.
+                </p>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://www.instagram.com/cielve.studios/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-card"
+                    >
+                        <div class="social-icon instagram">
+                            ◎
+                        </div>
+
+                        <div>
+                            <strong>Instagram</strong>
+                            <span>@cielve.studios</span>
+                        </div>
+
+                        <b>↗</b>
+                    </a>
+
+
+                    <a
+                        href="https://www.facebook.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-card"
+                    >
+                        <div class="social-icon facebook">
+                            f
+                        </div>
+
+                        <div>
+                            <strong>Facebook</strong>
+                            <span>Cielve Studios</span>
+                        </div>
+
+                        <b>↗</b>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <img
+                    src="images/cielve-logo.png"
+                    alt="Cielve Studios"
+                >
+
+                <div>
+                    <strong>Cielve Studios</strong>
+                    <span>Independent Game Studio</span>
+                </div>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#inicio">Inicio</a>
+                <a href="#juegos">Juegos</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#redes">Redes</a>
+
             </div>
 
         </div>
 
-    </section>
+        <div class="footer-bottom">
+            <p>
+                © 2026 Cielve Studios. Todos los derechos reservados.
+            </p>
 
-</main>
+            <p>
+                Made with passion.
+            </p>
+        </div>
 
-<footer>
-    <p>© 2026 Cielve Studios</p>
-    <p>Founded by Jendry Danis</p> 
-    <p>Co-founded by Diego Gomez</p>
-</footer>
+    </footer>
 
-<script src="script.js"></script>
 
 </body>
 </html>
