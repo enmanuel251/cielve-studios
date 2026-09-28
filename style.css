@@ -1,4 +1,6 @@
-/* ================= RESET ================= */
+/* ==================================================
+   RESET
+================================================== */
 
 * {
     margin: 0;
@@ -6,13 +8,17 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
+
     background: #050505;
-    color: #fff;
+
+    color: white;
 
     font-family:
         Arial,
@@ -20,106 +26,156 @@ body {
         sans-serif;
 
     overflow-x: hidden;
+
 }
+
 
 a {
+
     color: inherit;
+
     text-decoration: none;
+
 }
+
 
 img {
+
     display: block;
+
+    max-width: 100%;
+
 }
 
 
-/* ================= NAVBAR ================= */
+
+/* ==================================================
+   NAVBAR
+================================================== */
 
 .navbar {
+
     position: fixed;
 
     top: 0;
     left: 0;
 
     width: 100%;
-    height: 82px;
+
+    height: 80px;
 
     z-index: 1000;
-
-    display: flex;
-    align-items: center;
-
-    padding: 0 5%;
 
     background:
         linear-gradient(
             to bottom,
             rgba(0,0,0,.85),
-            rgba(0,0,0,0)
+            transparent
         );
+
 }
 
-.logo img {
-    width: 55px;
-    height: 55px;
 
-    object-fit: contain;
-}
+.navbar-container {
 
-.nav-links {
-    position: absolute;
+    width: 90%;
 
-    left: 50%;
+    max-width: 1400px;
 
-    transform: translateX(-50%);
+    height: 100%;
+
+    margin: auto;
 
     display: flex;
 
-    gap: 45px;
+    align-items: center;
+
 }
 
-.nav-links a {
-    color: #cfcfcf;
 
-    font-size: 11px;
+.logo img {
+
+    width: 52px;
+
+    height: 52px;
+
+    object-fit: contain;
+
+}
+
+
+.navigation {
+
+    margin-left: auto;
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+.navigation a {
+
+    color: #aaa;
+
+    font-size: 10px;
+
     font-weight: bold;
 
     letter-spacing: 2px;
 
     transition: .3s;
+
 }
 
-.nav-links a:hover {
-    color: #fff;
+
+.navigation a:hover {
+
+    color: white;
+
 }
 
-.nav-play {
-    margin-left: auto;
+
+.header-button {
+
+    margin-left: 35px;
 
     padding: 12px 20px;
 
-    background: #fff;
+    background: white;
 
-    color: #000;
+    color: black;
 
-    font-size: 10px;
+    font-size: 9px;
+
     font-weight: bold;
 
     letter-spacing: 1px;
 
     transition: .3s;
-}
 
-.nav-play:hover {
-    background: #d6d6d6;
 }
 
 
-/* ================= HERO ================= */
+.header-button:hover {
+
+    background: #ccc;
+
+}
+
+
+
+/* ==================================================
+   HERO
+================================================== */
 
 .hero {
+
     position: relative;
 
     height: 100vh;
+
     min-height: 650px;
 
     display: flex;
@@ -127,143 +183,171 @@ img {
     align-items: center;
 
     overflow: hidden;
+
 }
 
-.hero-bg {
+
+.hero-background {
+
     position: absolute;
 
     inset: 0;
 
     background:
+
         radial-gradient(
-            circle at 50% 45%,
-            #303030 0%,
-            #151515 25%,
-            #080808 65%,
-            #030303 100%
+            circle at 50% 40%,
+            #333,
+            #111 35%,
+            #050505 75%
         );
 
-    transform: scale(1.05);
 }
+
 
 .hero-overlay {
+
     position: absolute;
 
     inset: 0;
 
     background:
+
         linear-gradient(
-            90deg,
-            rgba(0,0,0,.8),
-            rgba(0,0,0,.15),
-            rgba(0,0,0,.75)
+            to bottom,
+            rgba(0,0,0,.1),
+            #050505
         );
 
-    background:
-        linear-gradient(
-            to top,
-            #050505 0%,
-            transparent 35%,
-            rgba(0,0,0,.35) 100%
-        );
 }
 
+
 .hero-content {
+
     position: relative;
 
     z-index: 2;
 
     width: 90%;
+
     max-width: 1200px;
 
     margin: auto;
 
-    padding-top: 80px;
 }
 
-.hero-small {
-    margin-bottom: 15px;
 
-    color: #aaa;
+.hero-label {
 
-    font-size: 11px;
-    font-weight: bold;
+    color: #888;
+
+    font-size: 10px;
 
     letter-spacing: 5px;
+
+    font-weight: bold;
+
 }
 
+
 .hero h1 {
-    font-size: clamp(90px, 17vw, 230px);
+
+    margin-top: 15px;
+
+    font-size:
+        clamp(
+            100px,
+            18vw,
+            230px
+        );
 
     line-height: .75;
 
     letter-spacing: -10px;
 
-    font-weight: 900;
 }
 
+
 .hero-description {
-    max-width: 450px;
+
+    max-width: 430px;
 
     margin-top: 35px;
 
-    color: #aaa;
+    color: #999;
 
     font-size: 15px;
 
     line-height: 1.7;
+
 }
 
+
 .hero-buttons {
+
     display: flex;
 
     gap: 12px;
 
     margin-top: 30px;
+
 }
 
-.button {
-    padding: 16px 25px;
 
-    font-size: 10px;
+.button {
+
+    padding: 16px 24px;
+
+    font-size: 9px;
 
     font-weight: bold;
 
     letter-spacing: 2px;
 
     transition: .3s;
+
 }
 
-.button.primary {
-    background: #fff;
-    color: #000;
+
+.button-primary {
+
+    background: white;
+
+    color: black;
+
 }
 
-.button.primary:hover {
+
+.button-primary:hover {
+
+    background: #ccc;
+
     transform: translateY(-3px);
 
-    background: #ddd;
 }
 
-.button.secondary {
-    border: 1px solid rgba(255,255,255,.3);
 
-    background: rgba(0,0,0,.2);
+.button-secondary {
 
-    backdrop-filter: blur(10px);
+    border: 1px solid #555;
+
 }
 
-.button.secondary:hover {
+
+.button-secondary:hover {
+
     background: rgba(255,255,255,.1);
+
 }
 
-.hero-bottom {
+
+.hero-scroll {
+
     position: absolute;
 
-    bottom: 35px;
-    left: 5%;
+    bottom: 30px;
 
-    z-index: 2;
+    left: 5%;
 
     display: flex;
 
@@ -271,58 +355,76 @@ img {
 
     gap: 15px;
 
-    color: #777;
+    color: #555;
 
     font-size: 8px;
 
     letter-spacing: 3px;
+
 }
 
-.scroll-line {
+
+.hero-scroll div {
+
     width: 50px;
+
     height: 1px;
 
-    background: #777;
+    background: #555;
+
 }
 
 
-/* ================= JUEGO ================= */
 
-.game-section {
-    min-height: 850px;
+/* ==================================================
+   GAME PREVIEW
+================================================== */
+
+.game-preview {
+
+    min-height: 750px;
 
     display: grid;
 
     grid-template-columns: 55% 45%;
 
     background: #080808;
+
 }
 
-.game-image {
+
+.game-preview-image {
+
     position: relative;
 
-    min-height: 750px;
+    min-height: 700px;
 
     overflow: hidden;
 
     background:
+
         radial-gradient(
-            circle at 50% 40%,
-            #343434,
-            #151515 40%,
-            #060606 80%
+            circle,
+            #333,
+            #111 45%,
+            #050505
         );
+
 }
 
-.game-image::before {
+
+.game-preview-image::before {
+
     content: "";
 
     position: absolute;
 
     width: 500px;
+
     height: 500px;
 
     left: 50%;
+
     top: 50%;
 
     transform:
@@ -330,63 +432,78 @@ img {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid #333;
 
-    box-shadow:
-        0 0 100px rgba(255,255,255,.04);
 }
 
-.game-image-overlay {
+
+.game-preview-overlay {
+
     position: absolute;
 
     inset: 0;
 
     background:
+
         linear-gradient(
-            90deg,
-            transparent,
-            rgba(0,0,0,.2)
+            to top,
+            rgba(0,0,0,.8),
+            transparent
         );
+
 }
 
-.game-image-text {
+
+.game-preview-title {
+
     position: absolute;
 
-    left: 10%;
+    left: 8%;
+
     bottom: 10%;
 
-    z-index: 2;
 }
 
-.game-image-text span {
+
+.game-preview-title span {
+
     color: #777;
 
     font-size: 9px;
 
     letter-spacing: 4px;
+
 }
 
-.game-image-text h2 {
-    margin-top: 10px;
+
+.game-preview-title h2 {
+
+    margin-top: 8px;
 
     font-size: 100px;
 
     line-height: .8;
 
-    letter-spacing: -6px;
+    letter-spacing: -7px;
+
 }
 
-.game-image-text p {
+
+.game-preview-title p {
+
     margin-top: 15px;
 
-    color: #888;
+    color: #777;
 
     font-size: 9px;
 
     letter-spacing: 3px;
+
 }
 
-.game-content {
+
+.game-preview-content {
+
     display: flex;
 
     flex-direction: column;
@@ -394,34 +511,46 @@ img {
     justify-content: center;
 
     padding: 10%;
+
 }
 
-.game-label {
-    color: #777;
+
+.section-label {
+
+    color: #666;
 
     font-size: 9px;
 
     font-weight: bold;
 
     letter-spacing: 4px;
+
 }
 
-.game-content h2 {
+
+.game-preview-content h2 {
+
     margin-top: 20px;
 
-    font-size: clamp(45px, 5vw, 75px);
+    font-size: 65px;
 
-    line-height: .95;
+    line-height: .9;
 
     letter-spacing: -4px;
+
 }
 
-.game-content h2 span {
+
+.game-preview-content h2 span {
+
     color: #666;
+
 }
 
-.game-content > p {
-    max-width: 450px;
+
+.game-preview-content p {
+
+    max-width: 430px;
 
     margin-top: 30px;
 
@@ -429,73 +558,55 @@ img {
 
     font-size: 14px;
 
-    line-height: 1.9;
+    line-height: 1.8;
+
 }
 
-.game-info {
-    margin-top: 45px;
 
-    padding-top: 25px;
+.text-button {
 
-    display: flex;
-
-    gap: 35px;
-
-    border-top: 1px solid rgba(255,255,255,.08);
-}
-
-.game-info div {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 7px;
-}
-
-.game-info span {
-    color: #444;
-
-    font-size: 8px;
-
-    letter-spacing: 2px;
-}
-
-.game-info strong {
-    font-size: 10px;
-}
-
-.discover-button {
     width: fit-content;
 
     margin-top: 40px;
 
     padding-bottom: 8px;
 
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid white;
 
-    font-size: 10px;
+    font-size: 9px;
 
     font-weight: bold;
 
     letter-spacing: 2px;
 
     transition: .3s;
+
 }
 
-.discover-button span {
+
+.text-button span {
+
     margin-left: 20px;
 
     font-size: 18px;
+
 }
 
-.discover-button:hover {
+
+.text-button:hover {
+
     padding-left: 8px;
+
 }
 
 
-/* ================= LORE ================= */
 
-.lore-section {
+/* ==================================================
+   LORE
+================================================== */
+
+.lore-preview {
+
     position: relative;
 
     min-height: 750px;
@@ -505,87 +616,88 @@ img {
     align-items: center;
 
     overflow: hidden;
+
 }
 
-.lore-bg {
+
+.lore-background {
+
     position: absolute;
 
     inset: 0;
 
     background:
+
         radial-gradient(
             circle at 70% 50%,
-            #252525,
-            #101010 35%,
-            #050505 75%
+            #292929,
+            #111 40%,
+            #050505
         );
+
 }
 
+
 .lore-overlay {
+
     position: absolute;
 
     inset: 0;
 
     background:
+
         linear-gradient(
             90deg,
-            #050505 0%,
-            transparent 60%,
-            #050505 100%
+            #050505,
+            transparent 70%
         );
+
 }
 
+
 .lore-content {
+
     position: relative;
 
     z-index: 2;
 
     width: 90%;
-    max-width: 1200px;
+
+    max-width: 1100px;
 
     margin: auto;
 
-    display: grid;
-
-    grid-template-columns: 100px 600px;
-
-    gap: 50px;
 }
 
-.lore-number {
-    color: #333;
 
-    font-size: 80px;
+.lore-content h2 {
 
-    font-weight: 900;
-}
-
-.lore-text > span {
-    color: #777;
-
-    font-size: 9px;
-
-    letter-spacing: 4px;
-}
-
-.lore-text h2 {
     margin-top: 20px;
 
-    font-size: clamp(55px, 7vw, 100px);
+    font-size:
+        clamp(
+            55px,
+            8vw,
+            100px
+        );
 
     line-height: .85;
 
     letter-spacing: -6px;
+
 }
 
-.lore-text h2 em {
+
+.lore-content h2 span {
+
     color: #666;
 
-    font-style: normal;
 }
 
-.lore-text p {
-    max-width: 500px;
+
+.lore-content p {
+
+    max-width: 480px;
 
     margin-top: 30px;
 
@@ -594,459 +706,429 @@ img {
     font-size: 14px;
 
     line-height: 1.8;
+
 }
 
-.lore-mark {
+
+.lore-watermark {
+
     position: absolute;
 
-    right: 5%;
-    bottom: 8%;
+    right: 4%;
 
-    color: rgba(255,255,255,.04);
+    bottom: 5%;
 
-    font-size: 150px;
+    color: rgba(255,255,255,.035);
+
+    font-size: 160px;
 
     font-weight: 900;
 
-    letter-spacing: -10px;
+    letter-spacing: -12px;
+
 }
 
 
-/* ================= REDES ================= */
 
-.social-section {
+/* ==================================================
+   SOCIAL
+================================================== */
+
+.social-preview {
+
     padding: 140px 5%;
 
+    text-align: center;
+
     background: #070707;
+
 }
 
+
 .social-header {
-    width: min(1100px, 100%);
+
+    max-width: 800px;
 
     margin: auto;
 
-    text-align: center;
 }
 
-.social-header > span {
-    color: #555;
-
-    font-size: 9px;
-
-    letter-spacing: 5px;
-}
 
 .social-header h2 {
+
     margin-top: 20px;
 
-    font-size: clamp(45px, 7vw, 85px);
+    font-size:
+        clamp(
+            50px,
+            8vw,
+            90px
+        );
 
-    line-height: .9;
+    line-height: .85;
 
-    letter-spacing: -5px;
+    letter-spacing: -6px;
+
 }
 
-.social-header h2 strong {
+
+.social-header h2 span {
+
     color: #666;
+
 }
+
 
 .social-header p {
-    max-width: 500px;
 
-    margin: 25px auto 0;
+    max-width: 450px;
+
+    margin: 25px auto;
 
     color: #666;
 
     font-size: 14px;
 
-    line-height: 1.7;
 }
 
-.social-grid {
-    width: min(1100px, 100%);
 
-    margin: 65px auto 0;
+.social-button-container {
 
-    display: grid;
+    margin-top: 50px;
 
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
 }
 
-.social-card {
-    position: relative;
 
-    min-height: 350px;
+.social-main-button {
 
-    overflow: hidden;
-
-    display: flex;
-
-    align-items: flex-end;
-
-    border: 1px solid rgba(255,255,255,.08);
-
-    background: #111;
-
-    transition: .4s;
-}
-
-.social-card:hover {
-    transform: translateY(-8px);
-
-    border-color: rgba(255,255,255,.25);
-}
-
-.social-card-bg {
-    position: absolute;
-
-    inset: 0;
-
-    opacity: .7;
-
-    transition: .5s;
-}
-
-.instagram .social-card-bg {
-    background:
-        radial-gradient(
-            circle at 70% 20%,
-            #444,
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #080808,
-            #242424
-        );
-}
-
-.facebook .social-card-bg {
-    background:
-        radial-gradient(
-            circle at 70% 20%,
-            #3b3b3b,
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #070707,
-            #1e1e1e
-        );
-}
-
-.social-card:hover .social-card-bg {
-    transform: scale(1.08);
-}
-
-.social-content {
-    position: relative;
-
-    z-index: 2;
-
-    width: 100%;
-
-    padding: 35px;
-
-    background:
-        linear-gradient(
-            to top,
-            rgba(0,0,0,.95),
-            rgba(0,0,0,.2)
-        );
-}
-
-.social-icon {
-    width: 50px;
-    height: 50px;
-
-    margin-bottom: 25px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid rgba(255,255,255,.2);
-
-    font-size: 28px;
-}
-
-.social-content > span {
-    color: #777;
-
-    font-size: 8px;
-
-    letter-spacing: 3px;
-}
-
-.social-content h3 {
-    margin-top: 8px;
-
-    font-size: 24px;
-}
-
-.social-content p {
-    margin-top: 8px;
-
-    color: #777;
-
-    font-size: 12px;
-}
-
-.social-content b {
     display: inline-block;
 
-    margin-top: 22px;
+    padding: 18px 30px;
+
+    border: 1px solid #555;
 
     font-size: 9px;
 
+    font-weight: bold;
+
     letter-spacing: 2px;
+
+    transition: .3s;
+
 }
 
 
-/* ================= FOOTER ================= */
+.social-main-button span {
+
+    margin-left: 20px;
+
+}
+
+
+.social-main-button:hover {
+
+    background: white;
+
+    color: black;
+
+}
+
+
+
+/* ==================================================
+   FOOTER
+================================================== */
 
 .footer {
-    padding: 45px 5% 25px;
+
+    padding: 50px 5% 25px;
 
     background: #030303;
 
-    border-top: 1px solid rgba(255,255,255,.07);
+    border-top: 1px solid #151515;
+
 }
 
-.footer-logo {
+
+.footer-container {
+
+    max-width: 1400px;
+
+    margin: auto;
+
     display: flex;
 
     align-items: center;
 
-    gap: 15px;
+    justify-content: space-between;
+
 }
 
-.footer-logo img {
+
+.footer-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.footer-brand img {
+
     width: 45px;
+
     height: 45px;
 
     object-fit: contain;
+
 }
 
-.footer-logo div {
+
+.footer-brand div {
+
     display: flex;
 
     flex-direction: column;
 
     gap: 5px;
+
 }
 
-.footer-logo strong {
-    font-size: 12px;
+
+.footer-brand strong {
+
+    font-size: 11px;
 
     letter-spacing: 2px;
+
 }
 
-.footer-logo span {
+
+.footer-brand span {
+
     color: #444;
 
     font-size: 8px;
 
     letter-spacing: 2px;
+
 }
 
-.footer-links {
-    margin-top: 30px;
+
+.footer-navigation {
 
     display: flex;
 
     gap: 25px;
+
 }
 
-.footer-links a {
+
+.footer-navigation a {
+
     color: #555;
 
     font-size: 9px;
 
     letter-spacing: 2px;
 
-    transition: .3s;
 }
 
-.footer-links a:hover {
-    color: #fff;
+
+.footer-navigation a:hover {
+
+    color: white;
+
 }
 
-.footer-copy {
-    margin-top: 35px;
+
+.footer-bottom {
+
+    max-width: 1400px;
+
+    margin: 35px auto 0;
 
     padding-top: 20px;
 
-    border-top: 1px solid rgba(255,255,255,.05);
+    border-top: 1px solid #111;
 
     color: #333;
 
     font-size: 9px;
+
 }
 
 
-/* ================= TABLET ================= */
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
 
 @media (max-width: 900px) {
 
-    .nav-links {
-        gap: 20px;
+    .navigation {
+
+        gap: 15px;
+
     }
 
-    .game-section {
-        grid-template-columns: 1fr;
-    }
 
-    .game-image {
-        min-height: 550px;
-    }
+    .game-preview {
 
-    .game-content {
-        padding: 80px 8%;
-    }
-
-    .lore-content {
         grid-template-columns: 1fr;
 
-        gap: 10px;
     }
 
-    .lore-number {
-        display: none;
+
+    .game-preview-image {
+
+        min-height: 500px;
+
     }
 
 }
 
-
-/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
 
     .navbar {
+
         height: 65px;
 
         padding: 0 20px;
+
     }
+
 
     .logo img {
+
         width: 42px;
+
         height: 42px;
+
     }
 
-    .nav-links {
-        position: static;
 
-        transform: none;
+    .navigation {
 
-        margin-left: auto;
-        margin-right: 15px;
+        gap: 10px;
 
-        gap: 13px;
     }
 
-    .nav-links a {
-        font-size: 8px;
 
-        letter-spacing: 1px;
+    .navigation a {
+
+        font-size: 7px;
+
     }
 
-    .nav-play {
+
+    .header-button {
+
         display: none;
+
     }
 
-    .hero {
-        min-height: 650px;
-    }
-
-    .hero-content {
-        padding-top: 50px;
-    }
-
-    .hero-small {
-        font-size: 8px;
-
-        letter-spacing: 3px;
-    }
 
     .hero h1 {
-        font-size: 95px;
+
+        font-size: 100px;
 
         letter-spacing: -7px;
+
     }
+
 
     .hero-description {
+
         font-size: 13px;
+
     }
 
+
     .hero-buttons {
+
         flex-direction: column;
 
         width: 210px;
+
     }
 
-    .button {
-        text-align: center;
-    }
 
-    .game-image {
-        min-height: 450px;
-    }
+    .game-preview-content {
 
-    .game-image-text h2 {
-        font-size: 75px;
-    }
-
-    .game-content {
         padding: 70px 8%;
+
     }
 
-    .game-content h2 {
+
+    .game-preview-content h2 {
+
         font-size: 48px;
+
     }
 
-    .game-info {
-        flex-wrap: wrap;
 
-        gap: 20px;
+    .game-preview-title h2 {
+
+        font-size: 75px;
+
     }
 
-    .lore-section {
+
+    .lore-preview {
+
         min-height: 650px;
+
     }
 
-    .lore-content {
-        width: 85%;
-    }
 
-    .lore-text h2 {
+    .lore-content h2 {
+
         font-size: 58px;
 
-        letter-spacing: -4px;
     }
 
-    .lore-mark {
+
+    .lore-watermark {
+
         font-size: 80px;
+
     }
 
-    .social-section {
+
+    .social-preview {
+
         padding: 100px 20px;
+
     }
+
 
     .social-header h2 {
-        font-size: 50px;
+
+        font-size: 52px;
+
     }
 
-    .social-grid {
-        grid-template-columns: 1fr;
 
-        margin-top: 45px;
+    .footer-container {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 30px;
+
     }
 
-    .social-card {
-        min-height: 300px;
+
+    .footer-navigation {
+
+        flex-wrap: wrap;
+
     }
 
 }
